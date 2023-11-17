@@ -15,3 +15,6 @@ library(ggplot2)
 #1.3
 
 maps <- maps %>% mutate(Latitude = gsub("[^0-9.]", "", Latitude))
+#1.4
+idx <- which(grepl("W", maps$Longitude))
+

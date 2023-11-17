@@ -29,3 +29,9 @@ test_that("Dosya varl??k testi", {
 test_that("Test : maps adl?? de??i??ken Global Workspace???de mevcuttur.", {
   expect_true(exists("maps", envir = .GlobalEnv), info = "maps adl?? de??i??ken mevcut de??il.")
 })
+#2.6
+test_that("maps de??i??keninin data.frame olup olmad??????n?? kontrol et", {
+  
+  
+  expect_true(is.data.frame(maps), info = "maps de??i??keninin bir data.frame oldu??unu kontrol etme")
+})
