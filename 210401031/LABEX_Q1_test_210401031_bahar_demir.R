@@ -65,4 +65,16 @@ test_that("idx nesnesi Global Workspace'de mevcut olmal??d??r", {
   expect_true(exists("idx", envir = globalenv()), 
               info = "idx nesnesinin var oldu??unu kontrol etme")
 })
+#2.12
+test_that("idx nesnesinin tipi integer'dir", {
+  
+  expect_identical(class(idx), "integer", 
+                   info = "idx nesnesinin tipinin integer oldu??unu kontrol etme")
+})
 
+#2.13
+test_that("Year s??tunu numeric de??erlerden olu??mal??d??r", {
+  
+  expect_true(all(suppressWarnings(!is.na(as.numeric(maps$Year)))),
+              info = "Year s??tunu numeric de??erlerden olu??mal??d??r")
+})

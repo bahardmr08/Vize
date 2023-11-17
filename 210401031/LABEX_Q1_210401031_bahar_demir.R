@@ -39,5 +39,7 @@ ggplot(maps, aes(x = as.numeric(gsub("AD", "", Year)))) +
 maps <- maps %>%
   mutate(Longitude = ifelse(row.names(maps) %in% idx, -1 * Longitude, Longitude))
 
-
+#1.10
+finalResult <- maps %>%
+  select(Longitude,??Latitude,??Year)
 
