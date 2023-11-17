@@ -35,5 +35,9 @@ maps <- maps %>%
 ggplot(maps, aes(x = as.numeric(gsub("AD", "", Year)))) +
   geom_histogram(binwidth = 10, fill = "skyblue", color = "black") +
   labs(title = "Histogram of Years", x = "Year", y = "Frequency")
+#1.9 
+maps <- maps %>%
+  mutate(Longitude = ifelse(row.names(maps) %in% idx, -1 * Longitude, Longitude))
+
 
 

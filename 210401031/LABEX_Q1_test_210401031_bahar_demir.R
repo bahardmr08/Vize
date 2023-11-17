@@ -59,3 +59,10 @@ test_that("Longitude s??tunu numeric de??erlerden olu??mal??d??r", {
   expect_true(all(suppressWarnings(!is.na(as.numeric(maps$Longitude)))),
               info = "Longitude s??tunu numeric de??erlerden olu??mal??d??r")
 })
+#2.11 
+test_that("idx nesnesi Global Workspace'de mevcut olmal??d??r", {
+  
+  expect_true(exists("idx", envir = globalenv()), 
+              info = "idx nesnesinin var oldu??unu kontrol etme")
+})
+
