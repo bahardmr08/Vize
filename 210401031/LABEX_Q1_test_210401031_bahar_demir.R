@@ -1,11 +1,11 @@
 library(testthat)
-#ön hazırlık
-test_that("Çalışma alanındaki tüm değişkenleri sil", {
+#C6n hazD1rlD1k
+test_that("CalD1Ema alanD1ndaki tC<m deDiEkenleri sil", {
   rm(list = ls())
   expect_equal(length(ls()), 0)
 })
 
-test_that("Eğer mevcutsa veri setini sil", {
+test_that("EDer mevcutsa veri setini sil", {
   if ("MapsThatChangedOurWorld_StoryMap_Data.csv" %in% list.files()) {
     file.remove("MapsThatChangedOurWorld_StoryMap_Data.csv")
   }
@@ -18,3 +18,10 @@ print(current_dir)
 relative_path <- file.path(current_dir, "LABEX_Q1_210401031_bahar_demir.R")
 
 source(relative_path)
+#2.4
+#2.4
+test_that("Dosya varl??k testi", {
+  # Dosyan??n var olup olmad??????n?? kontrol etme
+  file_exist <- file.exists("MapsThatChangedOurWorld_StoryMap_Data.csv")
+  expect_true(file_exist, info = "Dosyan??n bulundu??unu kontrol etme")
+})
