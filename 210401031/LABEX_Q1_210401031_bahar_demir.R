@@ -20,5 +20,8 @@ idx <- which(grepl("W", maps$Longitude))
 #1.5
 maps <- maps %>%
   mutate(Longitude = gsub("[EW]", "", Longitude))
+#1.6 
+maps <- maps %>%
+  mutate(Year = as.numeric(gsub("AD", "", Year)))
 
 

@@ -41,3 +41,9 @@ test_that("maps data.frame'inin ilk s??tununun ad??n?? kontrol et", {
   
   expect_equal(names(maps)[1], "City", info = "maps data.frame'inin ilk s??tununun ad??n?? kontrol etme")
 })
+#2.8
+test_that("maps data.frame'inin 5. s??tununun ad??n?? kontrol et", {
+  
+  expect_false("Title" %in% names(maps), 
+               info = "maps data.frame'inin 5. s??tununun ad??nda 'Title' kelimesi ge??miyor mu?")
+})
