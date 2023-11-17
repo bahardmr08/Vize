@@ -31,4 +31,9 @@ maps <- maps %>%
     Latitude = as.numeric(gsub("[^0-9.-]", "", Latitude))
   )
 
+#1.8 
+ggplot(maps, aes(x = as.numeric(gsub("AD", "", Year)))) +
+  geom_histogram(binwidth = 10, fill = "skyblue", color = "black") +
+  labs(title = "Histogram of Years", x = "Year", y = "Frequency")
+
 
